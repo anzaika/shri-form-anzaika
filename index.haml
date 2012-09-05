@@ -21,6 +21,8 @@
     .row-fluid
       .span2
       .span8
+        %h1
+          Общие вопросы
         %table.table.table-striped
           %tr
             %td
@@ -66,43 +68,56 @@
             %td
               Чего вы ожидаете от участия в школе?
             %td
-              Трудоустройства в Яндексе
+              Хочу научиться разрабатывать интерфейсы и в дальнейшем работать в
+              яндексе.
           %tr
             %td
               Откуда вы о нас узнали?
             %td
-              Подразумеваю что под "нас" вы имеете в виду школу. Через баннер висевший на главной яндекса в правом верхнем углу
+              Через баннер висевший на главной яндекса в правом верхнем углу.
           %tr
             %td
               Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?
             %td
-              40 часов в неделю
+              40 часов в неделю.
           %tr
             %td
-              Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьёзный интерфейс, так и просто домашняя страничка
+              Расскажите нам о вашем опыте разработки.
+              Ничего не упускайте: это может быть как серьёзный интерфейс,
+              так и просто домашняя страничка
             %td
-              Самой серьёзной разработкой был
+              Программирую с переменным успехом с первого курса.
+              Веб-разработкой начал заниматься год назад.
+              Писал CGI-скрипты на руби для отображения статистики изменяющихся
+              параметров сервера. Также реализовал психологический
               %a{:href => "http://iat.heroku.com"}
-                этот
-              сайт.
+                тест
+              в виде js-приложения.
           %tr
             %td
-              Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?
+              Какие языки программирования, фреймворки и технологии
+              вы использовали? Сложились ли у вас личные предпочтения?
             %td
-              Ruby, jQuery, CoffeeScript, HAML, SASS, Sinatra, Twitter Bootstrap
+              C, Ruby, jQuery, CoffeeScript, HAML, SASS, Sinatra, Twitter Bootstrap
+              Весьма предпочитаю руби в качестве скрипотового языка общего
+              назначения.
           %tr
             %td
-              Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?
+              Какие редакторы и среды разработки вы использовали?
+              Чем обычно пользуетесь?
             %td
-              GVim
+              Четыре года назад пересел на Vim и с тех пор только им и пользуюсь.
           %tr
             %td
-              С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?
+              С какими ОС приходилось сталкиваться?
+              Для каких целей вы их использовали?
             %td
-              Windows, Ubuntu, Debian. Windows, Ubuntu - как ОС общего назначения. Debian - на серверах.
+              Windows, Ubuntu, Debian. Windows, Ubuntu - как ОС общего назначения.
+              Debian - на серверах.
           %tr
             %td
-              Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?
+              Приходилось ли вам пользоваться системами контроля версий?
+              Если да, то какими? Какая из них вам нравится больше всего?
             %td
               Пользуюсь git-ом. Другие не пробовал - git полностью устраивает.
           %tr
@@ -112,9 +127,24 @@
               Да - Trac.
           %tr
             %td
-              Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать
+              Какие полезные для фронтенд-разработчика ресурсы вы
+              используете и можете посоветовать?
             %td
-              Использую и рекомендую вычислительные ресурсы современных ЭВМ, это просто фантастика =).
+              Вычислительные =)
+              А также
+              %a{'href' => 'http://github.com'}
+                github
+              и
+              %a{'href' => 'http://pragprog.com'}
+                pragprog
+
+        %p
+          Также я
+          %a{'href' => 'https://github.com/anzaika/ya_iface_exam'}
+            сверстал
+          анкету в терминах БЭМ, с использованием bem-tools и bem-bl. Но, к
+          сожалению, у меня не получилось реализовать там всё необходимое для
+          выполнения задания.
 
         %h1
           Технические задания
@@ -144,14 +174,29 @@
               %p
                 Перечислите известные вам инструменты и приёмы для отладки кода в разных браузерах.
             %p
-              Chrome Developer Tools и Firebug. Из приёмов пожалуй только console.log()
+              Chrome Developer Tools и Firebug. Из приёмов, пожалуй, только
+              console.log().
           #techTwo.tab-pane.fade
             %blockquote
               %p
                 Опишите своими словами, что происходит в браузерах при
                 клике на ссылку yandex.ru (полнота ответа – на ваше усмотрение).
             %p
-              Пожалуй кроме парсинга
+              Имею лишь общее представление:
+              %ul
+                %li
+                  Закачивает скрипты и исполняет их.
+                %li
+                  Cтроит DOM-дерево.
+                %li
+                  Располагает ноды в соответствии с требованиями стилей на
+                  канвасе.
+                %li
+                  Отрисовывает страничку.
+              Если же этого уровня понимания перестаёт хватать, то всегда
+              %a{'href' => 'http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/'}
+                есть
+              где почитать =)
           #techThree.tab-pane.fade
             %blockquote
               %p
@@ -308,6 +353,145 @@
                 Нужно добавить опцию -v для verbose-режима, в котором дополнительно выводится значение
                 каждого из аргументов.
             %p
+              %p
+                Bash
+                %pre
+                  :preserve
+                    #!/usr/bin/env bash
+
+                    usage() {
+                    cat << EOF
+                    Usage: printargs.sh [OPTIONS] [ARGUMENTS]
+                    Print the number of arguments.
+
+                    OPTIONS:
+                    -h print help message
+                    -m MSG custom message
+                    -v print all passed arguments
+
+                    Examples:
+                    printargs.sh a b c
+                    printargs.sh -m 'Arguments count: ' a b c
+                    printargs.sh -h
+
+                    EOF
+                    }
+
+                    while getopts “hvm:” OPTION
+                    do
+                      case $OPTION in
+                        h)
+                            usage
+                            exit 1
+                            shift;;
+                        m)
+                            MESSAGE=$OPTARG
+                            shift;shift;;
+                        v)
+                            shift;
+                      esac
+                    done
+
+                    COUNT=0
+
+                    for ARG in $@; do
+                      echo $ARG
+                      let COUNT+=1
+                    done
+
+                    if [[ "$MESSAGE" != "" ]]; then
+                      echo $MESSAGE
+                    fi
+
+                    echo $COUNT
+              %p
+                Python
+                %pre
+                  :preserve
+                    #!/usr/bin/env python
+
+                    import argparse
+
+                    parser = argparse.ArgumentParser(description='Print the number of arguments.')
+                    parser.add_argument('arguments', metavar='ARG', type=str, nargs='*', help='some arguments')
+                    parser.add_argument('-m', dest='message', default='', help='custom message')
+                    parser.add_argument('-v', action='store_true', default=False, help='print arguments')
+
+                    args = parser.parse_args()
+
+                    count = 0
+
+                    for a in args.arguments:
+                      if (args.v):
+                        print a
+                      count += 1
+
+                    if args.message != '':
+                      print(args.message)
+
+                    print(count)
+              %p
+                Perl
+                %pre
+                  :preserve
+                    #!/usr/bin/env perl
+
+                    use strict;
+                    use Getopt::Long;
+                    use Pod::Usage;
+
+                    my $help;
+                    my $message = '';
+                    my $verbose = '';
+
+                    @ARGV and GetOptions(
+                        "h" => \$help,
+                        "v" => \$verbose#!/usr/bin/e,
+                        "m:s" => \$message,
+                    ) or pod2usage(1);
+                    pod2usage(-verbose => 2, -exitval => 2) if $help;
+
+                    my $count = 0;
+
+                    foreach $a (@ARGV) {
+                      print "$a\n" if $verbose;
+                      $count++;
+                    }
+
+                    if($message ne "") {
+                        print($message . "\n");
+                    }
+
+                    print($count . "\n");
+
+                    __END__
+
+                    =head1 NAME
+
+                    printargs.pl - Print the number of arguments.
+
+                    =head1 SYNOPSIS
+
+                    printargs.pl [options] [arguments]
+
+                    =head1 OPTIONS
+
+                    -h Show help message.
+
+                    -m MSG Specify a custom message.
+
+                    -v print arguments
+
+
+                    =head1 EXAMPLE
+
+                    printargs.sh a b c
+
+                    printargs.sh -m 'Arguments count: ' a b c
+
+                    printargs.sh -h
+
+                    =cut
           #techSix.tab-pane.fade
             %blockquote
               %p
