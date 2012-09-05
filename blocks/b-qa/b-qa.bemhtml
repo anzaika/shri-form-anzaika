@@ -1,0 +1,36 @@
+block b-qa {
+  content: [
+    {
+      elem: 'qas',
+      data: this.ctx.data
+    }
+  ]
+
+  elem qas {
+    content: [
+      {
+        block: 'b-layout-table',
+        mods: { layout: '58-40' },
+        content: [
+          {
+            elem: 'cell',
+            content: {
+              elem: 'question',
+              content: this.ctx.data.q
+            }
+          },
+          {
+            elem: 'gap'
+          },
+          {
+            elem: 'cell',
+            content: {
+              elem: 'answer',
+              content: this.ctx.data.a
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

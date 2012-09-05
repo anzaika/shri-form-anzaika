@@ -1,0 +1,24 @@
+.b-layout-table
+{
+  width: 900px;
+  margin: 0px auto;
+  padding: 80px 8px;
+  background-color: #fefefe;
+}
+
+.b-layout-table_layout_58-40 .b-layout-table__cell
+{
+    width: 400px;
+    padding: 18px 0;
+    text-align: left;
+}
+
+.b-layout-table_layout_58-40 .b-layout-table__gap
+{
+    width: 30px;
+}
+
+.b-layout-table_layout_58-40 .b-layout-table__inner
+{
+    margin-right: 0.8em;
+}

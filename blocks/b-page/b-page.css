@@ -1,0 +1,16 @@
+.b-page
+{
+    font: 17px Arial, Helvetica, sans-serif;
+
+    position: relative;
+
+    width: 100%;
+    min-width: 600px;
+    min-height: 360px;
+    margin: 0;
+    padding: 0;
+
+    color: #111;
+    background: #eee;
+}
+
