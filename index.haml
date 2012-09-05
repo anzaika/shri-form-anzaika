@@ -1,0 +1,319 @@
+!!!
+%html{ :lang => "en", "xml:lang" => "en", :xmlns => 'http://www.w3.org/1999/xhtml' }
+  %head
+    %meta{ "http-equiv" => "content-type", "content" => "text/html; charset=utf-8" }
+    %title Анкета для школы разработки интерфейсов
+    %link{ :href => "bootstrap.min.css", :media => "all", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "http://yandex.st/highlightjs/7.2/styles/default.min.css", :media => "all", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "custom.css", :media => "all", :rel => "stylesheet", :type => "text/css" }
+    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+    %script(src="bootstrap.min.js")
+    %script(src="http://yandex.st/highlightjs/7.2/highlight.min.js")
+    :javascript
+      $(document).ready(function() {
+        $('#techTabs a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+        $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+      });
+  %body
+    .row-fluid
+      .span2
+      .span8
+        %table.table.table-striped
+          %tr
+            %td
+              Фамилия, имя, отчество
+            %td
+              Заика Андрей Валерьевич
+          %tr
+            %td
+              E-mail
+            %td
+              anzaika@gmail.com
+          %tr
+            %td
+              Телефон
+            %td
+              +7-926-344-07-12
+          %tr
+            %td
+              Год рождения
+            %td
+              1987
+          %tr
+            %td
+              Город, в котором живёте
+            %td
+              Москва
+          %tr
+            %td
+              Вуз, факультет, специальность, кафедра
+            %td
+              МГУ им. М.В.Ломоносова, мехмат, механика, кафедра механики композитов
+          %tr
+            %td
+              Год окончания вуза
+            %td
+              2009
+          %tr
+            %td
+              На каком уровне владеете английским языком?
+            %td
+              Upper-intermidiate, свободно пишу и читаю.
+          %tr
+            %td
+              Чего вы ожидаете от участия в школе?
+            %td
+              Трудоустройства в Яндексе
+          %tr
+            %td
+              Откуда вы о нас узнали?
+            %td
+              Подразумеваю что под "нас" вы имеете в виду школу. Через баннер висевший на главной яндекса в правом верхнем углу
+          %tr
+            %td
+              Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?
+            %td
+              40 часов в неделю
+          %tr
+            %td
+              Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьёзный интерфейс, так и просто домашняя страничка
+            %td
+              Самой серьёзной разработкой был
+              %a{:href => "http://iat.heroku.com"}
+                этот
+              сайт.
+          %tr
+            %td
+              Какие языки программирования, фреймворки и технологии вы использовали? Сложились ли у вас личные предпочтения?
+            %td
+              Ruby, jQuery, CoffeeScript, HAML, SASS, Sinatra, Twitter Bootstrap
+          %tr
+            %td
+              Какие редакторы и среды разработки вы использовали? Чем обычно пользуетесь?
+            %td
+              GVim
+          %tr
+            %td
+              С какими ОС приходилось сталкиваться? Для каких целей вы их использовали?
+            %td
+              Windows, Ubuntu, Debian. Windows, Ubuntu - как ОС общего назначения. Debian - на серверах.
+          %tr
+            %td
+              Приходилось ли вам пользоваться системами контроля версий? Если да, то какими? Какая из них вам нравится больше всего?
+            %td
+              Пользуюсь git-ом. Другие не пробовал - git полностью устраивает.
+          %tr
+            %td
+              Использовали ли вы системы постановки и ведения задач?
+            %td
+              Да - Trac.
+          %tr
+            %td
+              Какие полезные для фронтенд-разработчика ресурсы вы используете и можете посоветовать
+            %td
+              Использую и рекомендую вычислительные ресурсы современных ЭВМ, это просто фантастика =).
+
+        %h1
+          Технические задания
+
+        %ul#techTabs.nav.nav-tabs
+          %li.active
+            %a{'href' => "#techOne", 'data-toggle' => 'tab'}
+              1.
+          %li
+            %a{'href' => "#techTwo", 'data-toggle' => 'tab'}
+              2.
+          %li
+            %a{'href' => "#techThree", 'data-toggle' => 'tab'}
+              3.
+          %li
+            %a{'href' => "#techFour", 'data-toggle' => 'tab'}
+              4.
+          %li
+            %a{'href' => "#techFive", 'data-toggle' => 'tab'}
+              5.
+          %li
+            %a{'href' => "#techSix", 'data-toggle' => 'tab'}
+              6.
+        #techTabsContent.tab-content
+          #techOne.tab-pane.fade.in.active
+            %blockquote
+              %p
+                Перечислите известные вам инструменты и приёмы для отладки кода в разных браузерах.
+            %p
+              Chrome Developer Tools и Firebug. Из приёмов пожалуй только console.log()
+          #techTwo.tab-pane.fade
+            %blockquote
+              %p
+                Опишите своими словами, что происходит в браузерах при
+                клике на ссылку yandex.ru (полнота ответа – на ваше усмотрение).
+            %p
+              Пожалуй кроме парсинга
+          #techThree.tab-pane.fade
+            %blockquote
+              %p
+                Предположим, что мы представляем автосалон по продаже японских и немецких автомобилей.
+                У нас есть базовые классы и примеры их использования. Допишите недостающий код.
+            %p
+              %pre
+                :preserve
+                  /**
+                  * Создает экземпляр Машины
+                  * @this {Car}
+                  * @param {string} manufacturer Производитель
+                  * @param {string} model Модель
+                  * @param {number} year Год производство
+                  *
+                  * @TODO: если конструктор вызывается без указания текущего года, то подставлять текущий
+                  * @TODO: реализовать методы вывода информации о машине:
+                  * console.log('Car: ' + bmw); // Car: BMW X5 2010
+                  * console.log(bmw.getInfo()); // BMW X5 2010
+                  * console.log(bmw.getDetailedInfo()); // Производитель: BMW. Модель: X5. Год: 2010
+                  */
+                  function Car(manufacturer, model, year) {
+                    var d = new Date();
+                    this.manufacturer = manufacturer;
+                    this.model = model;
+                    this.year = (year || d.getFullYear());
+                    this.price = 0;
+
+                    this.getInfo = function(params) {
+                      switch (params) {
+                        case 'rub':
+                          return [this.manufacturer, this.model, this.year, "-->", this.getPriceRub()].join(" ");
+                        default:
+                          return [this.manufacturer, this.model, this.year].join(" ");
+                      }
+                    }
+
+                    this.toString = function(params) {
+                      return this.getInfo(params);
+                    }
+
+                    this.getDetailedInfo = function() {
+                      return [
+                              "Производитель: " + this.manufacturer,
+                              "Moдель: "        + this.model,
+                              "Год: "           + this.year
+                            ].join(". ")
+                    }
+
+                    this.getCountry = function() {
+                      switch (this.manufacturer.toLowerCase()) {
+                        case 'bmw':
+                        case 'audi':
+                            return 'Germany';
+                        case 'toyota':
+                            return 'Japan';
+                      }
+                    }
+
+                    this.getPriceRub = function() {
+                      switch (this.price[0]) {
+                        case '€':
+                          return Math.round(this.price.slice(1,this.length) * 40.6197);
+                        case '¥':
+                          return Math.round(this.price.slice(1,this.length) * 0.41);
+                        case 0:
+                          return 0;
+                        default:
+                          return -1;
+                      }
+                    }
+
+                  }
+
+                  /**
+                  * Создает экземпляр Автосалона
+                  * @this {CarDealer}
+                  * @param {string} name Название автосалона
+                  *
+                  * @TODO: реализовать метод добавления машин в автосалон.
+                  *        Предусмотреть возможность добавления одной машины,
+                            нескольких машин.
+                  * @TODO: реализовать метод установки цены на машину
+                  * @TODO: реализовать вывод списка автомобилей в продаже,
+                            с фильтрацией по стране производителю, используя метод getCountry:
+                  * @TODO: бонус! выводить список машин с ценой в рублях.
+                  */
+                  function CarDealer(name) {
+                      this.name = name;
+                      this.cars = [];
+
+                      this.add = function() {
+                        for ( var i=0; i < arguments.length; i++) {
+                          this.cars.push(arguments[i]);
+                        }
+                      }
+
+                      this.find = function(car) {
+                        var data = car.split(" "),
+                            result;
+                        for (var i=0; i < this.cars.length; i++) {
+                          var c = this.cars[i];
+                          if ( c.manufacturer == data[0] &&
+                              c.model        == data[1] &&
+                              c.year         == data[2] ) {
+                            result = c;
+                          }
+                        }
+                        return (result || -1);
+                      }
+
+                      this.setPrice = function(car, price) {
+                        var c = this.find(car);
+                        c.price = price;
+                      }
+
+                      this.list = function() {
+                        return this.cars.join(", ");
+                      }
+
+                      this.listByCountry = function(country) {
+                        var select = [];
+                        for (var i=0; i < this.cars.length; i++) {
+                          if (this.cars[i].getCountry() === country) {
+                            select.push(this.cars[i]);
+                          }
+                        }
+                        return select.join(", ");
+                      }
+
+                      this.listWithPrice = function() {
+                        var result = [];
+                        for (var i=0; i < this.cars.length; i++) {
+                          result.push(this.cars[i].getInfo('rub'));
+                        }
+                        return result.join(", ");
+                      }
+
+                  }
+          #techFour.tab-pane.fade
+            %blockquote
+              %p
+                Найдите все текстовые файлы (*.txt), в имени которых содержится «yandex»,
+                а в содержимом — «школа фронтенд-разработки». (предполагается работа с командной строкой)
+            %p
+              %pre
+                :preserve
+                  grep -H -r "школа разработки интерфейсов" /home/pupkin/*yandex*.txt -R | cut -d: -f1
+          #techFive.tab-pane.fade
+            %blockquote
+              %p
+                Дана программа, реализованная одновременно на Bash, Python и Perl.
+                Программа принимает произвольное количество аргументов и печатает их количество.
+                Нужно добавить опцию -v для verbose-режима, в котором дополнительно выводится значение
+                каждого из аргументов.
+            %p
+          #techSix.tab-pane.fade
+            %blockquote
+              %p
+                Расскажите, в каком объёме и при каких обстоятельствах вы изучали следующие темы:
+                языки программирования (императивные/декларативные, разные системы типов),
+                структуры (классы, структуры данных, примитивные типы),
+                парадигмы (события, ООП, параллельность/асинхронность, кеширование),
+                алгоритмы (парсинг, сортировка, поиск), паттерны.
+            %p
